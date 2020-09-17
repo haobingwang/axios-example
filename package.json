@@ -1,0 +1,13 @@
+{
+  "name": "axios-example",
+  "version": "1.0.0",
+  "description": "axios 封装实例",
+  "main": "index.js",
+  "repository": "https://github.com/haobingwang/axios-example.git",
+  "author": "haobingwang",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
