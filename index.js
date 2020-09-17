@@ -31,8 +31,8 @@ service.interceptors.request.use(
 );
 
 // 响应拦截器
-service.interceptors.payloadponse.use(
-  (payloadponse) => {
+service.interceptors.response.use(
+  (response) => {
     /**
      * 接口返回值格式
      * {
@@ -41,9 +41,9 @@ service.interceptors.payloadponse.use(
      *    data
      * }
      */
-    const payload = payloadponse.data || {};
+    const payload = response.data || {};
     if (payload.code !== 0) {
-      console.error(payload, payloadponse.config.url);
+      console.error(payload, response.config.url);
       // 通用错误处理
       if (payload.code === 401) {
         window.localStorage.removeItem("token");
